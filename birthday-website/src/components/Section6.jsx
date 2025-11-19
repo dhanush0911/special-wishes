@@ -30,20 +30,11 @@ const Section6 = () => {
         >
           <div className="thank-you-image-container">
             <motion.img
-              src="../src/assets/image3.jpg" // Replace with your decoration photo
+              src="/image3.jpg"
               className="decoration-image"
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
-            {/* <div className="decoration-badge">
-              <motion.div
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
-              >
-              </motion.div>
-            </div> */}
           </div>
 
           <motion.div

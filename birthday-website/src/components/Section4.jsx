@@ -74,9 +74,8 @@ const Section4 = () => {
           <video 
             controls 
             className="clean-video"
-            poster="../src/assets/GuitarVideo.mp4"
           >
-            <source src="../src/assets/GuitarVideo.mp4" type="video/mp4" />
+            <source src="/GuitarVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>

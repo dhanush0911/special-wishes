@@ -30,22 +30,12 @@ const Section5 = () => {
           transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
         >
           <motion.img
-            src="../src/assets/Image2.jpg" // Replace with your actual photo path
+            src="/Image2.jpg"
             alt="Our Special Date - October 15th"
             className="special-memory-image"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300 }}
           />
-          {/* <div className="memory-date-badge">
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
-            >
-              📅 October 15th
-            </motion.div>
-          </div> */}
         </motion.div>
 
         {/* Message Container - Below */}
@@ -105,10 +95,8 @@ const Section5 = () => {
             <video 
               controls 
               className="memory-video"
-              poster="/video-poster.jpg" // Optional: add a custom poster image
             >
-              <source src="../src/assets/Video1.mp4" type="video/mp4" />
-              <source src="/october-15-memory-video.webm" type="video/webm" />
+              <source src="/Video1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <motion.p

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Section3.css';
+import Image1 from '../src/assets/Image1.jpg'; 
 
 const Section3 = () => {
   return (

@@ -16,7 +16,7 @@ const Section3 = () => {
         <div className="photo-frame">
           <div className="image-container">
             <motion.img
-              src="../src/assets/Image1.jpg" // Replace with your photo path
+              src={Image1} // Replace with your photo path
               alt="Our Special Memory"
               className="memory-photo"
               whileHover={{ scale: 1.05 }}

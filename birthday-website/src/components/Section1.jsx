@@ -89,7 +89,7 @@ const Section1 = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
         >
-          <p>Every day with you feels like a celebration</p>
+          <p>Every day with you feels like a celebration, the energy you carry and the happinees you bring light up my life.</p>
           <motion.div
             className="special-heart"
             animate={{ 

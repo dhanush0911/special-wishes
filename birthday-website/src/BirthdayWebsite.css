@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.birthday-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #ff6b6b, #ff8e8e, #ffb3c6, #ffd6e0, #ff9a8b);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  position: relative;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Romantic Background Elements */
+.romantic-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.twinkling-stars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+    radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+  background-repeat: repeat;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.8; }
+}
+
+.floating-sparkles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(3px 3px at 50px 100px, #ffd700, transparent),
+    radial-gradient(3px 3px at 200px 150px, #ff69b4, transparent),
+    radial-gradient(3px 3px at 300px 200px, #ff1493, transparent);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.love-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200vw;
+  height: 200vh;
+  background: radial-gradient(circle, rgba(255,105,180,0.1) 0%, transparent 70%);
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhanced Music Control */
+.music-control {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 
+    0 8px 32px rgba(255, 105, 180, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.music-control:hover {
+  box-shadow: 
+    0 12px 40px rgba(255, 105, 180, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Progress Indicator */
+.progress-indicator {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.progress-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+}
+
+/* Love Message Popup */
+.love-message-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  padding: 30px 50px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2000;
+  box-shadow: 
+    0 20px 60px rgba(255, 105, 180, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* Love Button */
+.love-button {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #ff8e8e, #ffb3c6);
+  padding: 15px 25px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 32px rgba(255, 105, 180, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Romantic Footer */
+.romantic-footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.romantic-footer p {
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-indicator {
+    right: 15px;
+  }
+  
+  .progress-dot {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .music-control, .love-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .love-message-popup {
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    margin: 0 20px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff8e8e, #ffb3c6);
+}

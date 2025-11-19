@@ -1,0 +1,165 @@
+.opening-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  color: white;
+}
+
+/* Main content styling */
+.main-content {
+  z-index: 10;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Birthday title with improved styling */
+.birthday-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b, #ff8e53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Romantic message styling */
+.romantic-message {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.romantic-message p {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.special-heart {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
+}
+
+/* Romantic quote styling */
+.romantic-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-top: 2rem;
+  padding: 1.5rem 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+}
+
+/* Floating hearts */
+.floating-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -50px;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+/* Sparkle particles */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .birthday-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .romantic-message {
+    font-size: 1.2rem;
+  }
+  
+  .romantic-quote {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .special-heart {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .romantic-message {
+    font-size: 1rem;
+  }
+  
+  .romantic-quote {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,231 @@
+.ending-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ending-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.ending-container h2 {
+  color: #970026; /* Deep red */
+  font-size: 3.5rem;
+  margin-bottom: 60px;
+  text-shadow: 
+    0 0 20px rgba(151, 0, 38, 0.6),
+    0 0 40px rgba(151, 0, 38, 0.4);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.ending-content {
+  margin-bottom: 50px;
+}
+
+.ending-message {
+  text-align: left;
+  padding: 40px;
+  background: rgba(151, 0, 38, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  border: 1px solid rgba(151, 0, 38, 0.2);
+  box-shadow: 
+    0 20px 60px rgba(151, 0, 38, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  margin-bottom: 40px;
+}
+
+.ending-message h3 {
+  color: #970026; /* Deep red */
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(151, 0, 38, 0.5);
+  font-weight: 600;
+}
+
+.ending-message p {
+  color: #970026; /* Deep red */
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  text-align: justify;
+}
+
+.future-feelings {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.future-item {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px rgba(151, 0, 38, 0.6));
+}
+
+.final-birthday-wish {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 40px 0;
+  border: 2px solid rgba(151, 0, 38, 0.3);
+  box-shadow: 
+    0 15px 50px rgba(151, 0, 38, 0.2),
+    0 8px 25px rgba(126, 0, 72, 0.2);
+}
+
+.final-birthday-wish h4 {
+  color: #970026; /* Deep red */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(151, 0, 38, 0.4);
+  font-weight: 600;
+}
+
+.final-birthday-wish p {
+  color: #2D1B00; /* Dark brown/black */
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+.closing-message {
+  color: #970026; /* Deep red */
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 
+    0 0 15px rgba(151, 0, 38, 0.7),
+    0 0 30px rgba(126, 0, 72, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(151, 0, 38, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(151, 0, 38, 0.1);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .ending-container h2 {
+    font-size: 2.8rem;
+  }
+  
+  .ending-message h3 {
+    font-size: 1.8rem;
+  }
+  
+  .ending-message p {
+    font-size: 1.1rem;
+  }
+  
+  .final-birthday-wish h4 {
+    font-size: 1.6rem;
+  }
+  
+  .final-birthday-wish p {
+    font-size: 1.2rem;
+  }
+  
+  .closing-message {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ending-section {
+    padding: 60px 15px;
+  }
+  
+  .ending-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .ending-message {
+    padding: 25px;
+  }
+  
+  .ending-message h3 {
+    font-size: 1.6rem;
+  }
+  
+  .ending-message p {
+    font-size: 1rem;
+  }
+  
+  .final-birthday-wish {
+    padding: 30px;
+    margin: 30px 0;
+  }
+  
+  .final-birthday-wish h4 {
+    font-size: 1.4rem;
+  }
+  
+  .final-birthday-wish p {
+    font-size: 1.1rem;
+  }
+  
+  .closing-message {
+    font-size: 1.3rem;
+    padding: 25px;
+  }
+  
+  .future-item {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ending-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .ending-message {
+    padding: 20px;
+  }
+  
+  .ending-message h3 {
+    font-size: 1.4rem;
+  }
+  
+  .final-birthday-wish {
+    padding: 20px;
+  }
+  
+  .final-birthday-wish h4 {
+    font-size: 1.2rem;
+  }
+  
+  .final-birthday-wish p {
+    font-size: 1rem;
+  }
+  
+  .closing-message {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+  
+  .future-feelings {
+    gap: 20px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .future-item {
+    animation: none;
+  }
+}

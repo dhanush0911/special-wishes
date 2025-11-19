@@ -1,0 +1,125 @@
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 30px;
+  filter: 
+    drop-shadow(0 0 15px rgba(255, 23, 68, 0.6))
+    drop-shadow(0 0 30px rgba(255, 105, 180, 0.4))
+    drop-shadow(0 0 45px rgba(255, 20, 147, 0.3));
+  z-index: 2;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.heart:nth-child(odd) {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+.heart:nth-child(even) {
+  animation: gentle-pulse 4s ease-in-out infinite reverse;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { 
+    filter: 
+      drop-shadow(0 0 12px rgba(255, 23, 68, 0.5))
+      drop-shadow(0 0 25px rgba(255, 105, 180, 0.3))
+      drop-shadow(0 0 40px rgba(255, 20, 147, 0.2));
+  }
+  50% { 
+    filter: 
+      drop-shadow(0 0 18px rgba(255, 23, 68, 0.7))
+      drop-shadow(0 0 35px rgba(255, 105, 180, 0.5))
+      drop-shadow(0 0 50px rgba(255, 20, 147, 0.4));
+  }
+}
+
+.floating-phrase {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.8),
+    0 0 20px rgba(255, 20, 147, 0.6),
+    0 0 30px rgba(255, 23, 68, 0.4);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  z-index: 3;
+  white-space: nowrap;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff6b9d, #ff8fab, #ffb3c6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 5px 15px;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Additional floating elements */
+.hearts-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 20, 147, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(255, 23, 68, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .heart {
+    font-size: 24px;
+  }
+  
+  .floating-phrase {
+    font-size: 1.4rem;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hearts-container {
+    display: none; /* Hide on very small screens for better performance */
+  }
+}
+
+/* Smooth performance optimizations */
+.heart {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Special heart styles for different types */
+.heart:contains('💖') {
+  filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.7));
+}
+
+.heart:contains('💕') {
+  filter: drop-shadow(0 0 20px rgba(255, 182, 193, 0.7));
+}
+
+.heart:contains('❤️') {
+  filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.7));
+}
+
+.heart:contains('🌸') {
+  filter: drop-shadow(0 0 20px rgba(255, 192, 203, 0.7));
+}

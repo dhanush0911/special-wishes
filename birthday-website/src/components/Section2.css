@@ -9,6 +9,7 @@
   padding: 30px 15px;
   width: 100%;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .section-title {
@@ -45,8 +46,9 @@
 .flip-card {
   background-color: transparent;
   width: 100%;
-  max-width: 320px;
-  height: 450px;
+  max-width: 340px;
+  height: auto;
+  min-height: 500px;
   perspective: 1000px;
   cursor: pointer;
   position: relative;
@@ -59,10 +61,10 @@
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 500px;
   text-align: center;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
-  position: relative;
 }
 
 .flip-card.flipped .flip-card-inner {
@@ -74,13 +76,14 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  min-height: 500px;
   backface-visibility: hidden;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 
     0 15px 40px rgba(151, 0, 38, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
@@ -152,78 +155,60 @@
   text-align: left;
   transform: rotateY(180deg);
   z-index: 1;
+  overflow: visible;
+  justify-content: flex-start;
 }
 
 .back-content {
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  width: 100%;
 }
 
 .love-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
 
 .back-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
   text-align: center;
   color: #fff;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  line-height: 1.3;
+  line-height: 1.2;
   font-weight: 600;
 }
 
 .message-text {
-  flex: 1;
-  overflow-y: auto;
-  padding-right: 5px;
-  margin-bottom: 15px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  overflow: visible;
+  padding-right: 0;
+  margin-bottom: 10px;
 }
 
 .message-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
   text-align: left;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
 }
 
-.message-text::-webkit-scrollbar {
-  width: 3px;
-}
-
-.message-text::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-}
-
-.message-text::-webkit-scrollbar-track {
-  background: transparent;
-}
-
 .signature {
   text-align: right;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
-  margin-top: 15px;
+  margin-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 12px;
+  padding-top: 8px;
   line-height: 1.3;
   font-weight: 500;
 }
 
-/* Floating notes - Hidden on mobile */
 .floating-note {
   position: absolute;
   background: rgba(151, 0, 38, 0.1);
@@ -249,7 +234,6 @@
   right: 10%;
 }
 
-/* Hover effects for desktop */
 @media (hover: hover) {
   .flip-card:hover .flip-card-front {
     box-shadow: 
@@ -258,7 +242,6 @@
   }
 }
 
-/* Tablet Styles */
 @media (min-width: 768px) {
   .flip-card-section {
     padding: 50px 20px;
@@ -266,7 +249,18 @@
   
   .flip-card {
     max-width: 450px;
-    height: 550px;
+    min-height: 550px;
+  }
+  
+  .flip-card-inner {
+    min-height: 550px;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    min-height: 550px;
+    padding: 40px;
+    border-radius: 25px;
   }
   
   .section-title h2 {
@@ -275,12 +269,6 @@
   
   .section-title p {
     font-size: 1.3rem;
-  }
-  
-  .flip-card-front,
-  .flip-card-back {
-    padding: 40px;
-    border-radius: 25px;
   }
   
   .front-content h2 {
@@ -292,46 +280,61 @@
   }
   
   .back-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .message-text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   
   .signature {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
-  /* Show floating notes on tablet and desktop */
   .floating-note {
     display: block;
   }
 }
 
-/* Desktop Styles */
 @media (min-width: 1024px) {
   .flip-card {
     max-width: 500px;
-    height: 600px;
+    min-height: 600px;
+  }
+  
+  .flip-card-inner {
+    min-height: 600px;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    min-height: 600px;
   }
   
   .floating-note {
     padding: 15px 25px;
     font-size: 1.1rem;
   }
+  
+  .message-text p {
+    font-size: 1.1rem;
+  }
 }
 
-/* Small mobile devices */
 @media (max-width: 360px) {
   .flip-card {
     max-width: 280px;
-    height: 400px;
+    min-height: 450px;
+  }
+  
+  .flip-card-inner {
+    min-height: 450px;
   }
   
   .flip-card-front,
   .flip-card-back {
-    padding: 20px;
+    min-height: 450px;
+    padding: 18px;
   }
   
   .section-title h2 {
@@ -351,19 +354,18 @@
   }
   
   .back-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .message-text p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
   
   .signature {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
-/* Prevent text selection on mobile */
 .flip-card {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -371,24 +373,16 @@
   user-select: none;
 }
 
-/* Smooth scroll for back content */
-.message-text {
-  scroll-behavior: smooth;
-}
-
-/* Ensure proper rendering on all devices */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Focus styles for accessibility */
 .flip-card:focus {
   outline: 2px solid rgba(151, 0, 38, 0.5);
   outline-offset: 4px;
 }
 
-/* Reduced motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   .flip-card-inner {
     transition-duration: 0.1s;

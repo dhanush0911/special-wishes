@@ -68,10 +68,10 @@ const Section3 = () => {
             You have this incredible ability to turn ordinary moments into magical memories. 
             It was the for the very firt time I realized we were meeting and that was so nice and 
             special. We had a bitter day just before that day and but when we met the things were 
-            entirely diffrent and I felt so happy and light. [translate:Bohot kuch socha uss time pe] but i really 
+            entirely diffrent and I felt so happy and light. Bohot kuch socha uss time pe, but i really 
             enjoyed your company maam. 
             I love the way you eat food and the way you get happy after eating and do you happy dance.
-            [translate:Bass dekh ke maza aata hai yaar. Mai thoda sa bhul jata hu ki mujhe bhi khana hai] because I get so
+            Bass dekh ke maza aata hai yaar. Mai thoda sa bhul jata hu ki mujhe bhi khana hai, because I get so
             engrossed in watching you enjoy your food.
           </p>
           
@@ -85,8 +85,8 @@ const Section3 = () => {
             <div className="note-icon">💫</div>
             <p>
               Thank you for all that beautiful day and for making every moment 
-              feel like heaven. [translate:Tabhi thoda sa laga ki aise aur memories banani hai
-              iss ladki ke saath.]
+              feel like heaven. Tabhi thoda sa laga ki aise aur memories banani hai
+              iss ladki ke saath.
             </p>
           </motion.div>
         </motion.div>

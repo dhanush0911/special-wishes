@@ -1,64 +1,24 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import './Section6.css';
 
 const Section6 = () => {
   return (
     <section className="thank-you-section">
-      <motion.div
-        className="thank-you-container"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <motion.h2
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Thank You For Making My Birthday Special 🎉
-        </motion.h2>
+      <div className="thank-you-container">
+        <h2>Thank You For Making My Birthday Special 🎉</h2>
 
-        <motion.div
-          className="thank-you-content"
-          initial={{ scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
-        >
+        <div className="thank-you-content">
           <div className="thank-you-image-container">
-            <motion.img
-              src="/image3.jpg"
+            <img
+              src="/Image3.jpg"
               className="decoration-image"
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 300 }}
             />
           </div>
 
-          <motion.div
-            className="thank-you-message"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <motion.h3
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              My Heartfelt Gratitude 💖
-            </motion.h3>
+          <div className="thank-you-message">
+            <h3>My Heartfelt Gratitude 💖</h3>
             
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 1 }}
-            >
+            <p>
               I want to thank you from the bottom of my heart for making my birthday 
               so incredibly special. The way you decorated Mr. Nexon 🤭 by yourself and put so much 
               love and effort into celebrating my day... it meant the world to me. The efforts that you took
@@ -77,85 +37,21 @@ const Section6 = () => {
               <br /><br />
               Thank you for all the effort, the surprises, and most of all, for being you. 
               Aap jaise bhi ho mujhe bas aise hi pasand ho. I feel so lucky to have you in my life.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="gratitude-feelings"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-            >
-              <motion.div
-                className="gratitude-item"
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0]
-                }}
-                transition={{ 
-                  duration: 3, 
-                  repeat: Infinity,
-                  delay: 0
-                }}
-              >
-                🎂
-              </motion.div>
-              <motion.div
-                className="gratitude-item"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  y: [0, -10, 0]
-                }}
-                transition={{ 
-                  duration: 2, 
-                  repeat: Infinity,
-                  delay: 1
-                }}
-              >
-                🎀
-              </motion.div>
-              <motion.div
-                className="gratitude-item"
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, -5, 5, 0]
-                }}
-                transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity,
-                  delay: 2
-                }}
-              >
-                🎉
-              </motion.div>
-              <motion.div
-                className="gratitude-item"
-                animate={{ 
-                  scale: [1, 1.15, 1],
-                  y: [0, -8, 0]
-                }}
-                transition={{ 
-                  duration: 2.2, 
-                  repeat: Infinity,
-                  delay: 1.5
-                }}
-              >
-                💝
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+            <div className="gratitude-feelings">
+              <div className="gratitude-item">🎂</div>
+              <div className="gratitude-item">🎀</div>
+              <div className="gratitude-item">🎉</div>
+              <div className="gratitude-item">💝</div>
+            </div>
+          </div>
+        </div>
 
-        <motion.div
-          className="final-thank-you"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-        >
+        <div className="final-thank-you">
           Thank you for being the most amazing person in my life. 💖
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 };
